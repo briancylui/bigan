@@ -7,3 +7,4 @@ theano
 caffe
 sklearn
 matplotlib
+pandas
