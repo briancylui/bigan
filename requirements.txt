@@ -1,0 +1,9 @@
+lib
+multiprocessing
+numpy
+scipy
+pillow
+theano
+caffe
+sklearn
+matplotlib
