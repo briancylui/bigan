@@ -4,7 +4,6 @@ numpy
 scipy
 pillow
 theano
-caffe
 sklearn
 matplotlib
 pandas
