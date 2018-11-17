@@ -12,7 +12,7 @@ from lib.data_utils import shuffle
 
 data_dir = './data/mnist'
 
-def mnist(args):
+def mnist():
     fd = open(os.path.join(data_dir,'train-images.idx3-ubyte'))
     loaded = np.fromfile(file=fd,dtype=np.uint8)
     trX = loaded[16:].reshape((60000,28*28))
@@ -35,8 +35,11 @@ def mnist(args):
     return trX, teX, trY, teY
 
 def mnist_with_valid_set(args):
-    trX, teX, trY, teY = mnist(args)
+    trX, teX, trY, teY = mnist()
 
+    target, outlier_prop, weight_repulsive = 
+        args.target_class, args.outlier_prop, args.weight_repulsive
+    
     trX, trY = shuffle(trX, trY)
     vaX = trX[50000:]
     vaY = trY[50000:]
