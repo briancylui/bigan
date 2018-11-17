@@ -1,6 +1,6 @@
 # export THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32
 # CNMem enabled:
-export THEANO_FLAGS=mode=FAST_RUN,device=gpu
+export THEANO_FLAGS=mode=FAST_RUN,device=cuda
 export THEANO_FLAGS=${THEANO_FLAGS},dnn.enabled=True
 # export THEANO_FLAGS=${THEANO_FLAGS},lib.cnmem=1
 # export THEANO_FLAGS=${THEANO_FLAGS},lib.cnmem=0.1
@@ -32,7 +32,7 @@ export THEANO_FLAGS=${THEANO_FLAGS},dnn.conv.algo_fwd=time_once,dnn.conv.algo_bw
 
 # CUDNN=/home/jdonahue/cudnn3/cuda
 # CUDNN=/home/jdonahue/cudnn4/cuda
-CUDNN=/home/jdonahue/cudnn5/cuda
+CUDNN=/usr/local/cuda
 export CPATH=${CUDNN}/include
 export LD_LIBRARY_PATH=${CUDNN}/lib64:$LD_LIBRARY_PATH
 export LIBRARY_PATH=$LD_LIBRARY_PATH
